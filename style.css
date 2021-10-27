@@ -55,12 +55,10 @@ div.container img.portrait {
   top: -55px;
   z-index: 2;
 }
-p {
-  font-size: 1.2rem;
-}
+
 p > span {
   letter-spacing: 0.1rem;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
 }
 
 div.stats {
