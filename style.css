@@ -2,19 +2,16 @@ html,
 body {
   font-family: "Kumbh Sans", sans-serif;
   text-align: center;
+  margin: 0;
 }
-body {
+main {
   background-color: hsl(185, 75%, 39%);
-  background-image: url(images/bg-pattern-top.svg),
-    url(images/bg-pattern-bottom.svg);
-  background-position: top -40vh left -40vh, bottom -40vh right -40vh;
-  background-repeat: no-repeat;
-  background-size: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 span {
   font-weight: 400;
@@ -29,23 +26,28 @@ div.line {
 div p {
   font-weight: 800;
 }
-h1,
-h2 {
+h1 {
   font-size: 18px;
   padding: 0;
 }
-main {
+
+div.container {
   background: white;
   display: grid;
   justify-content: center;
   align-items: center;
   height: 390px;
   border-radius: 1rem;
+  z-index: 2;
 }
 h1 span {
   margin-left: 0.4rem;
 }
-img.portrait {
+
+div.container > img {
+  border-radius: 1rem 1rem 0 0;
+}
+div.container img.portrait {
   border-radius: 50%;
   margin: 0 auto;
   border: 5px white solid;
@@ -53,8 +55,8 @@ img.portrait {
   top: -55px;
   z-index: 2;
 }
-main > img {
-  border-radius: 1rem 1rem 0 0;
+p {
+  font-size: 1.2rem;
 }
 p > span {
   letter-spacing: 0.1rem;
@@ -62,7 +64,7 @@ p > span {
 }
 
 div.stats {
-  padding-top: 0.5rem;
+  padding: 0.5rem 2rem 0 2rem;
   display: flex;
   justify-content: space-around;
 }
@@ -73,8 +75,21 @@ div.stats {
 .attribution {
   margin-top: 10px;
   color: white;
+  z-index: 2;
 }
-.attribution > a {
+main .attribution > a {
   color: yellow;
   font-weight: 700;
+}
+
+.upper-side {
+  right: 50%;
+  bottom: 50%;
+  position: fixed;
+}
+
+.lower-side {
+  top: 50%;
+  left: 50%;
+  position: fixed;
 }
